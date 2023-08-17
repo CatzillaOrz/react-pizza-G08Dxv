@@ -1,6 +1,3 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-
 const pizzaData = [
   {
     name: "Focaccia",
@@ -45,42 +42,3 @@ const pizzaData = [
     soldOut: false,
   },
 ];
-
-function App() {
-  return (
-    <>
-    <h1>Hello React!</h1>
-    <Pizza/>
-    </>
-  )
-}
-
-function Pizza(){
-  return(
-    <div>
-    <img src='pizzas/spinaci.jpg' alt='pizza'/>
-    <h2> Pizza Spinaci</h2>
-    <p>Tomato, mozarella, spinach, and ricotta cheese</p>
-    </div>
-  )
-}
-
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
-/*
- * StrictMode will render components twice 
- * in order to : 
- * 1. to find any bugs in components
- * 2. to check if deprecated methods has been used
- */
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
-
-/*
- * react 17 would be like
- * import ReactDOM from 'react-dom';
- * React.rander(<App/>);
- */
