@@ -79,7 +79,17 @@ function Menu() {
   )
 }
 function Footer() {
-  return <footer className='footer'>{new Date().toLocaleTimeString()}. We're currently open!!</footer>
+  const isOpen = true;
+  return (
+    <footer className='footer'>
+    {isOpen && (
+      <div className='order'>
+      {new Date().toLocaleTimeString()}. We're currently open!!
+      <button className='btn'>Order</button>
+      </div>
+    )}
+    </footer>
+  )
   //React.createElement("footer", null, "We're currently open!!") 
 }
 
